@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
   <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors">
-  <meta property="og:title" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors"/>
-  <meta property="og:description" content="Grasping Force Estimation in Markerless Visuo-Tactile Sensors"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <meta name="description" content="DualQuat-LOAM: LiDAR Odometry and Mapping parametrized on Dual Quaternions">
+  <meta property="og:title" content="DualQuat-LOAM: LiDAR Odometry and Mapping parametrized on Dual Quaternions"/>
+  <meta property="og:description" content="DualQuat-LOAM: LiDAR Odometry and Mapping parametrized on Dual Quaternions"/>
+  <meta property="og:url" content="https://aurova-projects.github.io/tracker_fusion/"/>
   <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <meta property="og:image" content="static/images/EKFdiagramICINCO.png" />
+  <meta property="og:image" content="static/images/dualquat_loam_pipeline.png" />
   <meta property="og:image:width" content="856"/>
   <meta property="og:image:height" content="515"/>
 
@@ -18,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-  <title>Grasping Force Estimation in Markerless Visuo-Tactile Sensors</title>
+  <title>DualQuat-LOAM: LiDAR Odometry and Mapping parametrized on Dual Quaternions</title>
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
   rel="stylesheet">
@@ -41,66 +41,72 @@
 <body>
 
 
-  <section class="hero is-small">
+  <header class="hero is-small">
     <div class="hero-body">
       <div class="container">
-          <img src="static/images/logoAUROVAg.png" alt="Logo AUROVA" class="left"  width="25%"/>
-          <img src="static/images/logo-ua.jpg" alt="Logo UA" class="right"  width="25%"/>
-  </div>
-  </div>
-  </section>
+        <a href="https://aurova-projects.github.io/"><img src="static/images/logoAUROVA.png" alt="Logo AUROVA" class="left"  width="20%"/></a>
+        <img src="static/images/logo-ua.png" alt="Logo UA" class="right"  width="25%"/>
+      </div>  
+    </div>
+    <div class="hline"></div>
+  </header>
 
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Grasping Force Estimation in Markerless Visuo-Tactile Sensors</h1>
+            <h1 class="title is-1 publication-title">DualQuat-LOAM: LiDAR Odometry and Mapping parametrized on Dual Quaternions</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
-                Julio Castaño-Amorós,
+                Edison P. Velasco-Sánchez<sup>1</sup>,
               </span>
               <span class="author-block">
-                Pablo Gil,
+                Luis F. Recalde<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Guanrui Li<sup>2</sup>,
+              </span>
+              <span class="author-block">
+                Francisco A. Candelas-Herias<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Santiago T. Puente-Mendez<sup>1</sup>,
+              </span>
+              <span class="author-block">
+                Fernando Torres-Medina<sup>1</sup>
               </span>
             </div>
 
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">Group of Automation, Robotics and Computer Vision (AUROVA)<br>University of Alicante</span>
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>1</sup> Group of Automation, Robotics and Computer Vision (AUROVA), University of Alicante</span>
+            </div>
+            
+            <div class="is-size-6 publication-authors">
+              <span class="author-block"><sup>2</sup> Worcester Polytechnic Institute, Robotics Engineering</span>
             </div>
 
             <div class="is-size-8 publication-authors">
-              <span class="author-block"><a href="mailto:julio.ca@ua.es" target="_blank">julio.ca@ua.es</a></span>
-              <span class="author-block"><a href="mailto:pablo.gil@ua.es" target="_blank">pablo.gil@ua.es</a></span>
+              <span class="author-block"><a href="mailto:edison.velasco@ua.es" target="_blank">edison.velasco@ua.es</a></span>
             </div>
 
             <div class="column has-text-centered">
               <div class="publication-links">
                     <!-- Paper link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
+                  <a href="https://rua.ua.es/dspace/bitstream/10045/138863/1/Olivas_etal_ICINCO-2023.pdf" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (soon)</span>
-                </a>
-              </span>
-              
-               <span class="link-block">
-                  <a href="" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Dataset</span>
+                  <span>Paper</span>
                 </a>
               </span>
 
             <!-- Github link -->
             <span class="link-block">
-              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_force_estimation" target="_blank"
+              <a href="https://github.com/AUROVA-LAB/applications/tree/main/app_tracker_fusion" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
@@ -116,6 +122,165 @@
   </div>
 </section>
 
+<!-- Pipeline image -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container_fig">
+      <div class="column_2fig"><div class="content has-text-justified">
+        <h2 class="title is-3" style="text-align: center;">Abstract</h2>
+        <p>
+          Mobile robotics is increasingly in need of low bias and computationally efficient odometry methods. 
+          In response to this need, we present a LiDAR odometry estimation approach by fully parameterizing the system using dual quaternions. 
+          To achieve this, both the features extracted from the point cloud, such as edges, surfaces and STD (Stable Triangle Descriptor) descriptors, 
+          as well as the optimizer, are represented in the dual quaternion set. This advantage allows us to incorporate both position and attitude 
+          of STD descriptors into the estimation problem, significantly improving pose estimation, which is reflected in comparative 
+          experiments with other state-of-the-art methods. Unlike traditional approaches, our odometry estimation does not rely on global maps 
+          or loop closure algorithms, further reducing computational costs. Experimental results show a translation and rotation error 
+          of <b>0.79%</b> and <b>0.0039°/m</b> on the KITTI dataset, with an average run time of <b>53 ms</b>.
+        </p>
+      </div>
+      </div>
+      <div class="column_2fig"><img src="static/images/dualquat_loam_pipeline.png" alt="Global map" width="90%"/></div>      
+    </div>    
+  </div>
+</section>
+<!-- END Pipeline image -->
+
+
+<!-- Start image carousel -->
+<!-- <section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">KITTI results</h2>
+      <div id="img-carousel" class="carousel results-carousel">
+        <div class="item">
+            <img src="static/images/mapping/00_map.png" alt="Sequence 00 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 00.
+            </h2> 
+        </div>
+        <div class="item">
+          <img src="static/images/mapping/01_map.png" alt="Sequence 01 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 01.
+          </h2>
+        </div>
+        <div class="item">
+          <img src="static/images/mapping/02_map.png" alt="Sequence 02 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 02.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/03_map.png" alt="Sequence 03 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 03.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/04_map.png" alt="Sequence 04 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 04.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/05_map.png" alt="Sequence 05 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 05.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/06_map.png" alt="Sequence 06 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 06.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/07_map.png" alt="Sequence 07 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 07.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/08_map.png" alt="Sequence 08 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 08.
+          </h2>
+        </div> 
+        <div class="item">
+          <img src="static/images/mapping/09_map.png" alt="Sequence 09 map" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+            Sequence 09.
+          </h2>
+        </div>       
+        <div class="item">
+            <img src="static/images/mapping/10_map.png" alt="Sequence 10 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered"></h2>
+              Sequence 10.
+            </h2>
+        </div>      
+        
+      </div>
+    </div>
+  </div>
+
+</section> -->
+<!-- End image carousel -->
+
+<!-- Start image carousel -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3">STD processing</h2>
+      <div id="img-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <img src="static/images/std/std_descriptor.png" alt="std frame" class="center" width="40%"/>
+          <h2 class="subtitle has-text-centered">
+            STD Descriptor
+          </h2>  
+      </div>
+        <div class="item">
+            <img src="static/images/std/std_00.png" alt="std frame" class="center" width="80%"/>
+            <h2 class="subtitle has-text-centered">
+              Reference frame of four STD descriptors detected in a point cloud
+            </h2>  
+        </div>
+        <div class="item">
+            <img src="static/images/std/std_01.png" alt="std current and std map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Current STD descriptors and the map of STD descriptors represented as blue triangles and black triangles, respectively
+            </h2>   
+        </div>
+        <div class="item">
+          <img src="static/images/std/std_02.png" alt="std_match" class="center" width="100%"/>
+          <h2 class="subtitle has-text-centered">
+             Matching process between the current STD descriptors and the STD map. <b>(A)</b> Sequence 00 of the KITTI dataset with the STD map. 
+            <b>(B)</b> and <b>(C)</b> show the matching of the STD descriptors and the STD map, the direction of the arrows show the same direction of the LiDAR sensor movement
+          </h2>   
+        </div>
+        <div class="item">
+          <img src="static/images/std/std_03.png" alt="std_examples" class="center" width="80%"/>
+          <h2 class="subtitle has-text-centered">
+            Correspondence arrows from the STD map to the current STD descriptor. Examples executed in KITTI sequences.
+            <b>(A)</b> and <b>(B)</b> are part of the sequence 00 at 1.56 [s] and 42.6 [s] respectively. 
+            <b>(C)</b> is the sequence 06 at 31.9 [s], and the <b>(D)</b> is the sequence 01 at 0.83 [s]
+          </h2>   
+        </div>
+        <div class="item">
+          <img src="static/images/std/seq_01_std.GIF" alt="std_gif" class="center" width="80%"/>
+          <!-- <h2 class="subtitle has-text-centered">
+            Correspondence arrows from the STD map to the current STD descriptor. Examples executed in KITTI sequences.
+            <b>(A)</b> and <b>(B)</b> are part of the sequence 00 at 1.56 [s] and 42.6 [s] respectively. 
+            <b>(C)</b> is the sequence 06 at 31.9 [s], and the <b>(D)</b> is the sequence 01 at 0.83 [s].
+          </h2>    -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!-- End image carousel -->
 
 <!-- Teaser video-->
 <!-- <section class="hero teaser">
@@ -157,61 +322,292 @@
 </section> -->
 <!-- End video carousel -->
 
-<!-- Youtube video -->
+<!-- Video and PDF Section -->
 <section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
+      <!-- Section title -->
+      <h2 class="title is-3 has-text-centered">KITTI Results</h2>
+      <div class="columns is-centered">
+        <!-- First column for the video (2/3 of the width) -->
+        <div class="column is-two-thirds has-text-centered">          
           <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/4n441Vaq704" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <!-- Google Drive embed code here -->
+            <iframe src="https://drive.google.com/file/d/1A-e4VzV8HYdcUvPdWAHldoIyWKpfGUPi/preview" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen width="100%" height="400"></iframe>
           </div>
+        </div>
+        
+        <!-- Second column for the carousel 2/3 of the width) -->
+        <div class="column is-two-thirds has-text-centered">
+          <!-- Start image carousel --> 
+    
+        <div id="img-carousel" class="carousel results-carousel" height="400">
+          <div class="item">
+              <img src="static/images/mapping/00_map.png" alt="Sequence 00 map" class="center" width="100%"/>
+              <h2 class="subtitle has-text-centered">
+                Sequence 00
+              </h2> 
+          </div>
+          <div class="item">
+            <img src="static/images/mapping/01_map.png" alt="Sequence 01 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 01
+            </h2>
+          </div>
+          <div class="item">
+            <img src="static/images/mapping/02_map.png" alt="Sequence 02 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 02
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/03_map.png" alt="Sequence 03 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 03
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/04_map.png" alt="Sequence 04 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 04
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/05_map.png" alt="Sequence 05 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 05
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/06_map.png" alt="Sequence 06 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 06
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/07_map.png" alt="Sequence 07 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 07
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/08_map.png" alt="Sequence 08 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 08
+            </h2>
+          </div> 
+          <div class="item">
+            <img src="static/images/mapping/09_map.png" alt="Sequence 09 map" class="center" width="100%"/>
+            <h2 class="subtitle has-text-centered">
+              Sequence 09
+            </h2>
+          </div>       
+          <div class="item">
+              <img src="static/images/mapping/10_map.png" alt="Sequence 10 map" class="center" width="100%"/>
+              <h2 class="subtitle has-text-centered">
+                Sequence 10
+              </h2>
+          </div>      
+          
+        </div>
+      </div>
+    </div>
+<!-- End image carousel -->
+          <!-- <div class="publication-pdf">
+                      <iframe src="static/images/kitti_00-10.pdf" frameborder="0" width="100%" height="500"></iframe>
+          </div> -->
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End video and PDF section -->
+
+<section class="columns is-centered">
+<table>
+  <caption>KITTI dataset results. The values are represented as Translation(%) / Rotation(º/100m). The best results are highlighted in red, and the second best in blue.</caption>
+  <thead>
+    <tr>
+      <th>Seq. N°</th>
+      <th>Path Len. (m)</th>
+      <th>LOAM</th>
+      <th>T-LOAM</th>
+      <th>F-LOAM</th>
+      <th>LiODOM</th>
+      <th>LiLO</th>
+      <th>DualQuat-LOAM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>00</td>
+      <td>3714</td>
+      <td>0.78/0.53</td>
+      <td>0.98/0.60</td>
+      <td>1.11/<span style="color: blue;">0.40</span></td>
+      <td>0.86/<span style="color: red;">0.35</span></td>
+      <td><span style="color: red;">0.71</span>/0.43</td>
+      <td><span style="color: blue;">0.75</span>/0.43</td>
+    </tr>
+    <tr>
+      <td>01</td>
+      <td>4268</td>
+      <td>1.43/0.55</td>
+      <td>2.09/0.52</td>
+      <td>3.01/0.85</td>
+      <td>1.30/<span style="color: red;">0.13</span></td>
+      <td><span style="color: blue;">1.29</span>/<span style="color: blue;">0.20</span></td>
+      <td><span style="color: red;">1.16</span>/0.21</td>
+    </tr>
+    <tr>
+      <td>02</td>
+      <td>5075</td>
+      <td><span style="color: red;">0.92</span>/0.55</td>
+      <td>1.01/<span style="color: blue;">0.39</span></td>
+      <td>1.22/0.43</td>
+      <td>0.95/<span style="color: red;">0.31</span></td>
+      <td>1.06/0.39</td>
+      <td><span style="color: blue;">0.94</span>/0.42</td>
+    </tr>
+    <tr>
+      <td>03</td>
+      <td>563</td>
+      <td><span style="color: red;">0.86</span>/0.65</td>
+      <td><span style="color: blue;">1.10</span>/0.82</td>
+      <td>4.51/1.84</td>
+      <td>1.26/<span style="color: red;">0.23</span></td>
+      <td>1.22/<span style="color: blue;">0.31</span></td>
+      <td>1.30/0.36</td>
+    </tr>
+    <tr>
+      <td>04</td>
+      <td>397</td>
+      <td>0.71/0.50</td>
+      <td><span style="color: blue;">0.68</span>/0.68</td>
+      <td>0.93/0.63</td>
+      <td>1.41/<span style="color: red;">0.01</span></td>
+      <td>0.84/<span style="color: blue;">0.28</span></td>
+      <td><span style="color: red;">0.41</span>/0.40</td>
+    </tr>
+    <tr>
+      <td>05</td>
+      <td>2223</td>
+      <td>0.57/0.38</td>
+      <td><span style="color: blue;">0.55</span>/<span style="color: red;">0.32</span></td>
+      <td>0.63/<span style="color: blue;">0.32</span></td>
+      <td>0.83/0.36</td>
+      <td><span style="color: red;">0.53</span>/0.34</td>
+      <td>0.56/0.38</td>
+    </tr>
+    <tr>
+      <td>06</td>
+      <td>1239</td>
+      <td>0.65/0.39</td>
+      <td>0.56/<span style="color: red;">0.31</span></td>
+      <td>2.15/0.74</td>
+      <td>0.83/0.33</td>
+      <td><span style="color: red;">0.54</span>/<span style="color: blue;">0.32</span></td>
+      <td><span style="color: blue;">0.54</span>/0.39</td>
+    </tr>
+    <tr>
+      <td>07</td>
+      <td>695</td>
+      <td>0.63/0.50</td>
+      <td><span style="color: red;">0.50</span>/<span style="color: blue;">0.47</span></td>
+      <td><span style="color: blue;">0.51</span>/<span style="color: red;">0.35</span></td>
+      <td>0.88/0.61</td>
+      <td>0.60/0.61</td>
+      <td>0.62/0.63</td>
+    </tr>
+    <tr>
+      <td>08</td>
+      <td>3225</td>
+      <td>1.12/0.44</td>
+      <td><span style="color: blue;">0.94</span>/<span style="color: blue;">0.33</span></td>
+      <td>0.97/0.37</td>
+      <td><span style="color: red;">0.86</span>/<span style="color: red;">0.33</span></td>
+      <td>1.07/0.41</td>
+      <td>1.04/0.39</td>
+    </tr>
+    <tr>
+      <td>09</td>
+      <td>1717</td>
+      <td>0.77/0.48</td>
+      <td>0.80/0.40</td>
+      <td>0.82/0.40</td>
+      <td>1.03/<span style="color: blue;">0.32</span></td>
+      <td><span style="color: red;">0.63</span>/<span style="color: red;">0.32</span></td>
+      <td><span style="color: blue;">0.68</span>/0.38</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>919</td>
+      <td><span style="color: blue;">0.79</span>/0.57</td>
+      <td>1.12/0.61</td>
+      <td>2.52/0.96</td>
+      <td>1.20/0.29</td>
+      <td>0.99/<span style="color: blue;">0.33</span></td>
+      <td><span style="color: red;">0.72</span>/<span style="color: red;">0.33</span></td>
+    </tr>
+    <tr>
+      <td>avg</td>
+      <td>-</td>
+      <td><span style="color: blue;">0.84</span>/0.50</td>
+      <td>0.93/0.49</td>
+      <td>1.67/0.66</td>
+      <td>1.04/<span style="color: red;">0.30</span></td>
+      <td>0.86/<span style="color: blue;">0.36</span></td>
+      <td><span style="color: red;">0.79</span>/0.39</td>
+    </tr>
+  </tbody>
+</table>
+</section>
+
+
 
 
 
 <!-- Paper abstract -->
-<section class="section hero is-light">
+<!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           Tactile sensors have been used for force estimation in the past, especially Vision-Based Tactile Sensors (VBTS) have recently become a new trend due to their high spatial resolution and low cost. In this work, we have designed and implemented several approaches to estimate the normal grasping force using different types of markerless visuotactile representations obtained from VBTS. Our main goal is to determine the most appropriate visuotactile representation, based on a performance analysis during robotic grasping tasks. Our proposal has been tested on the dataset generated with our DIGIT sensors and another one obtained using GelSight Mini sensors from another state-of-the-art work. We have also tested the generalization capabilities of our best approach, called RGBmod. The results led to two main conclusions. First,
-the RGB visuotactile representation is a better input option than the depth image or a combination of the two for estimating normal grasping forces. Second, RGBmod achieved a good performance when tested on 10 unseen everyday objects in real-world scenarios, achieving an average relative error of 0.125 ± 0.153. Furthermore, we show that our proposal outperforms other works in the literature that use RGB and depth information for the same task.
+            Mobile robotics is increasingly in need of low bias and computationally efficient odometry methods. 
+            In response to this need, we present a LiDAR odometry estimation approach by fully parameterizing the system using dual quaternions. 
+            To achieve this, both the features extracted from the point cloud, such as edges, surfaces and STD (Stable Triangle Descriptor) descriptors, 
+            as well as the optimizer, are represented in the dual quaternion set. This advantage allows us to incorporate both position and attitude 
+            of STD descriptors into the estimation problem, significantly improving pose estimation, which is reflected in comparative 
+            experiments with other state-of-the-art methods. Unlike traditional approaches, our odometry estimation does not rely on global maps 
+            or loop closure algorithms, further reducing computational costs. Experimental results show a translation and rotation error 
+            of 0.79\% and 0.0039°/m on the KITTI dataset, with an average run time of 53 ms.
           </p>
         </div>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End paper abstract -->
 
 
-<section class="hero is-small">
+<!-- Start image carousel -->
+<!-- <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-        <img src="static/images/esquema.png" alt="" class="center" width="80%" height=400/>
-        <h2 class="subtitle has-text-centered">
-          Diagram of our grasping force estimation method.
-        </h2>
-</div>
-</div>
-</section>
+      <div id="gif-carousel" class="carousel results-carousel">
+        <div class="item">
+            <img src="static/videos/Follow1_alltrackers_compress.gif" alt="GIF pedestrian tracking" class="center" width="75%"/>
+        </div>
+        <div class="item">
+            <img src="static/videos/Follow2_alltrackers_compress.gif" alt="GIF pedestrian tracking" class="center" width="75%"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> -->
 <!-- End image carousel -->
-
-
-
 
 <!-- Paper poster -->
 <!-- <section class="hero is-small is-light">
@@ -233,18 +629,8 @@ the RGB visuotactile representation is a better input option than the depth imag
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-<!--@conference{olivas2023robust,
-  author={Alejandro Olivas. and Miguel Muñoz{-}Bañón. and Edison Velasco. and Fernando Torres.},
-  title={Robust Single Object Tracking and Following by Fusion Strategy},
-  booktitle={Proceedings of the 20th International Conference on Informatics in Control, Automation and Robotics - Volume 1: ICINCO},
-  year={2023},
-  pages={624-631},
-  publisher={SciTePress},
-  organization={INSTICC},
-  doi={10.5220/0012178900003543},
-  isbn={978-989-758-670-5},
-  issn={2184-2809},
-}-->
+
+
     </code></pre>
     </div>
 </section>
