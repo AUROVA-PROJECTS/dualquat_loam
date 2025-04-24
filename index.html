@@ -99,27 +99,62 @@
 
             <div class="column has-text-centered">
               <div class="publication-links">
-                    <!-- Paper link -->
+                <!-- Paper link -->
                 <span class="link-block">
-                  <a href="http://arxiv.org/abs/2410.13541" target="_blank"
+                  <button href="https://www.sciencedirect.com/science/article/pii/S0921889025000958" target="_blank"
                   class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Paper (Arxiv preprint)</span>
-                </a>
+                  <span>Paper (Open Access)</span>
+                </button>
               </span>
 
             <!-- Github link -->
             <span class="link-block">
-              <a href="https://github.com/AUROVA-LAB/aurova_odom/tree/main/dualquat_LOAM" target="_blank"
+              <button href="https://github.com/AUROVA-LAB/aurova_odom/tree/main/dualquat_LOAM" target="_blank"
                 class="external-link button is-normal is-rounded is-dark">
                 <span class="icon">
                   <i class="fab fa-github"></i>
                 </span>
                 <span>Code</span>
-              </a>
+              </button>
             </span>
+
+              <!-- Cite button -->
+              <span class="link-block">
+                <button class="external-link button is-normal is-rounded is-dark" onclick="copyCitation()">
+                  <span class="icon">
+                  <i class="fas fa-quote-right"></i>
+                  </span>
+                  <span>Cite (BibText)</span>
+                </button>
+                </span>
+              </div>
+              </div>
+  
+              <script>
+              function copyCitation() {
+                const citationText = 
+                `@article{VELASCOSANCHEZ2025105009,
+                title = {DualQuat-LOAM: LiDAR odometry and mapping parameterized on dual quaternions},
+                author = {Edison P. Velasco-Sánchez and Luis F. Recalde and Guanrui Li and Francisco A. Candelas-Herias and Santiago T. Puente-Mendez and Fernando Torres-Medina}
+                journal = {Robotics and Autonomous Systems},
+                volume = {191},
+                pages = {105009},
+                year = {2025},
+                issn = {0921-8890},
+                doi = {https://doi.org/10.1016/j.robot.2025.105009},
+                url = {https://www.sciencedirect.com/science/article/pii/S0921889025000958},
+                publisher={Elsevier}
+                }`;
+                navigator.clipboard.writeText(citationText).then(() => {
+                alert("Citation copied to clipboard!");
+                }).catch(err => {
+                console.error("Failed to copy citation: ", err);
+                });
+              }
+              </script>
 
           </div>
         </div>
@@ -724,10 +759,18 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
-      <pre><code>
-
-
-    </code></pre>
+      <pre><code>@article{VELASCOSANCHEZ2025105009,
+        title = {DualQuat-LOAM: LiDAR odometry and mapping parameterized on dual quaternions},
+        author = {Edison P. Velasco-Sánchez and Luis F. Recalde and Guanrui Li and Francisco A. Candelas-Herias and Santiago T. Puente-Mendez and Fernando Torres-Medina}
+        journal = {Robotics and Autonomous Systems},
+        volume = {191},
+        pages = {105009},
+        year = {2025},
+        issn = {0921-8890},
+        doi = {https://doi.org/10.1016/j.robot.2025.105009},
+        url = {https://www.sciencedirect.com/science/article/pii/S0921889025000958},
+        publisher={Elsevier}        
+      }</code></pre>
     </div>
 </section>
 <!--End BibTex citation -->
